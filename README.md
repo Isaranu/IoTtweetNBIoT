@@ -10,5 +10,10 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 - วิธีการติดตั้งบน Arduino IDE : เข้าไปที่ **Sketch** > **Includes library** > **Manage libraries**, และพิมพ์ค้นหา "IoTtweetNBIoT". กด Install ได้ทันที.
 
-- Library ที่ต้องใช้งานร่วมด้วย : **AIS_NB_BC95.h**, สามารถติดตั้งได้จากค้นหาใน Arduino Library Manager
+- Library ที่ต้องใช้งานร่วมด้วย : **AIS_NB_BC95.h**, สามารถติดตั้งได้จากค้นหาใน Arduino Library Manager.
+
+### [วิธีใช้งานกับ Dashboard IoTtweet]
+
+- **สมัครใช้งาน IoTtweet** : เข้าไปที่ www.iottweet.com ทำการ Signup และ verify activate e-mail ให้เรียบร้อย. ไปที่ **My IoT garage** ทำการเพิ่ม device เพื่อรับ key ที่ใช้สำหรับใส่ลงใน code.
+
 
