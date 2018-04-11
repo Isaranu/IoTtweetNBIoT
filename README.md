@@ -30,14 +30,36 @@ Library สำหรับการส่งข้อมูลจากอุป
 ### [Code]
 
 คำอธิบายคำสั่ง code ต่างๆใน **IoTtweetNBIoT** library.<br>
+
+ - เรียกใช้งาน IoTtweetNBIoT.h library<br>
 ```CPP
 #include "IoTtweetNBIoT.h"
 ```
-เรียกใช้งาน IoTtweetNBIoT.h library<br>
 
+- กรอกเลข ID ของ IoTtweet account และ key ของอุปกรณ์ที่ register ใน **My IoT garage**.
 ```CPP
 String userid = "your-IoTtweet-account-ID";       /*IoTtweet account user ID (6 digits, included zero pre-fix)*/
 String key = "your-device-key";                   /*IoTtweet registered device key in "MY IOT Garage"*/
 ```
-กรอกเลข ID ของ IoTtweet account และ key ของอุปกรณ์ที่ register ใน **My IoT garage**.
 
+- Variable ของข้อมูลที่ต้องการส่ง. สามารถแทนเข้าไปในตัวแปรนี้ได้เลย.
+```CPP
+float data0, data1, data2, data3;                 /*Your sending data variable.*/
+String private_tweet = "AIS NB-IoT";              /*Your private tweet meassage to dashboard*/
+String public_tweet = "Hello IoTtweet";           /*Your public tweet message to dashboard*/
+```
+
+- ประกาศตัวแปร Class เพื่อใช้งานคำสั่งต่างๆที่อยู่ใน library
+```CPP
+IoTtweetNBIoT myNBiot;
+```
+
+- ส่งข้อมูล IoTtweet Dashboard
+```CPP
+myNBiot.sendDashboard(userid,key,data0,data1,data2,data3,private_tweet,public_tweet);
+```
+
+- อ่านค่า RSSI
+```CPP
+String rssi = myNBiot.readRSSI();
+```
