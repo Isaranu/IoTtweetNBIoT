@@ -69,7 +69,7 @@ String rssi = myNBiot.readRSSI();
 - Protocol แบบ UDP connection. (CoAP protocol กำลังพัฒนาอยู่ในขณะนี้)
 
 **รายละเอียดเพิ่มเติม**
-**website** : www.iottweet.com http://code.isaranu.com<br>
+**website** : www.iottweet.com และ http://code.isaranu.com<br>
 **facebook** : https://www.facebook.com/IoTtweet<br>
 **facebook group** : https://www.facebook.com/groups/191156967967490<br>
 **LINE ID** : @codeisaranu
