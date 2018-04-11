@@ -4,8 +4,8 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 ### [รายละเอียดของ Library]
 
-- อุปกรณ์ที่รองรับ และผ่านการทดสอบ **IoTtweetNBIoT** library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT จากบริษัท AIS (Advanced Info Services plc.)<br>
-**รุ่น Model** : DEVIO NB-SHIELD I.<br>
+- อุปกรณ์ที่รองรับ และผ่านการทดสอบ **IoTtweetNBIoT** library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT device.<br>
+**รุ่น Model** : DEVIO NB-SHIELD I. จากบริษัท AIS (Advanced Info Services plc.)<br>
 **ทำงานร่วมกับ** : Arduino UNO R3, Arduino MEGA 2560<br>
 **Sensor ที่ใช้ร่วมทดสอบ** : DHT22(Digital Temperature/Humidity sensor), GPS U-Blox NEO 6M.<br>
 
@@ -26,3 +26,18 @@ Library สำหรับการส่งข้อมูลจากอุป
 **SendDataToDashboard.ino** > Random ค่าส่งไปแสดงผลที่หน้า Dashboard ในช่องข้อมูล slot0 ถึง slot3 ตามลำดับ.<br>
 **SendRSSI** > ส่งค่าความเข้มสัญญาณ (Signal Strength - dbm) ไปแสดงผลที่ Dashboard.<br>
 > การเชื่อมต่อสัญญาณ NB-IoT ได้หรือไม่นั้น ขึ้นอยู่กับการเปิดสัญญาณในแต่ละพื้นที่.
+
+### [Code]
+
+คำอธิบายคำสั่ง code ต่างๆใน **IoTtweetNBIoT** library.<br>
+```CPP
+#include "IoTtweetNBIoT.h"
+```
+เรียกใช้งาน IoTtweetNBIoT.h library<br>
+
+```CPP
+String userid = "your-IoTtweet-account-ID";       /*IoTtweet account user ID (6 digits, included zero pre-fix)*/
+String key = "your-device-key";                   /*IoTtweet registered device key in "MY IOT Garage"*/
+```
+กรอกเลข ID ของ IoTtweet account และ key ของอุปกรณ์ที่ register ใน **My IoT garage**.
+
