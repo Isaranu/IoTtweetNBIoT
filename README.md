@@ -3,10 +3,12 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 ### [รายละเอียดของ Library]
 
-- อุปกรณ์ที่รองรับ และผ่านการทดสอบ
-"IoTtweetNBIoT" library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT จากบริษัท AIS (Advanced Info Services plc.)<br>
+- อุปกรณ์ที่รองรับ และผ่านการทดสอบ **IoTtweetNBIoT** library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT จากบริษัท AIS (Advanced Info Services plc.)<br>
 **รุ่น Model** : DEVIO NB-SHIELD I.<br>
 **ทำงานร่วมกับ** : Arduino UNO R3, Arduino MEGA 2560<br>
 **Sensor ที่ใช้ร่วมทดสอบ** : DHT22(Digital Temperature/Humidity sensor), GPS U-Blox NEO 6M.<br>
 
-- 
+- วิธีการติดตั้งบน Arduino IDE : เข้าไปที่ **Sketch** > **Includes library** > **Manage libraries**, และพิมพ์ค้นหา "IoTtweetNBIoT". กด Install ได้ทันที.
+
+- Library ที่ต้องใช้งานร่วมด้วย : **AIS_NB_BC95.h**, สามารถติดตั้งได้จากค้นหาใน Arduino Library Manager
+
