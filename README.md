@@ -5,11 +5,8 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 - อุปกรณ์ที่รองรับ และผ่านการทดสอบ
 "IoTtweetNBIoT" library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT จากบริษัท AIS (Advanced Info Services plc.)
-
 รุ่น Model : DEVIO NB-SHIELD I.
-
 ทำงานร่วมกับ : Arduino UNO R3, Arduino MEGA 2560
-
 Sensor ที่ใช้ร่วมทดสอบ : DHT22(Digital Temperature/Humidity sensor), GPS U-Blox NEO 6M.
 
 - 
