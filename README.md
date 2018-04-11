@@ -19,4 +19,9 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 - **ออกแบบ Dashboard** : ไปที่ **"Dashboard"**, และทำการ Edit layout. เพิ่ม Widget ต่างๆที่ต้องการ พร้อมทั้งตั้งค่า (setting) widget แต่ละ element ให้เรียบร้อย. เมื่อเสร็จเรียบร้อย ให้กด **"Save layout"**.
 
-- 
+- **เชื่อมต่อบอร์ด** : ประกอบบอร์ด DEVIO NB-SHIELD เข้ากับ Arduino UNO หรือ Arduino MEGA. (ประกอบให้ Pin ตรงกัน ตาม spec. ของบอร์ด) และทำการเชือมต่อสาย USB.
+
+- **Upload code** : สามารถใช้ code ตัวอย่างจากใน Examples ได้ เช่น<br>
+**SendDHTsensor.ino** > ส่งค่าอุณหภูมิและความชื้นจากเซนเซอร์ DHT ไปที่ Dashboard ในช่องข้อมูล slot0, slot1 ตามลำดับ.<br>
+**SendDataToDashboard.ino** > Random ค่าส่งไปแสดงผลที่หน้า Dashboard ในช่องข้อมูล slot0 ถึง slot3 ตามลำดับ.<br>
+**SendRSSI** > ส่งค่าความเข้มสัญญาณ (Signal Strength - dbm) ไปแสดงผลที่ Dashboard.<br>
