@@ -1,6 +1,6 @@
 ![alt text](https://github.com/Isaranu/IoTtweetNBIoT/blob/master/Logo%20IoTtweetNBIoT.png "logo")
 # IoTtweetNBIoT
-Library สำหรับการส่งข้อมูลจากอุปกรณ์ NB-IoT ไปที่ IoTtweet, Internet of Things platform ที่ใช้งานง่ายที่สุดแล้วในตอนนี้ :)
+Library สำหรับการส่งข้อมูลจากอุปกรณ์ NB-IoT ไปที่ **IoTtweet, Internet of Things platform** ที่ใช้งานง่ายที่สุดแล้วในตอนนี้ :)
 
 ### [รายละเอียดของ Library]
 
@@ -63,3 +63,13 @@ myNBiot.sendDashboard(userid,key,data0,data1,data2,data3,private_tweet,public_tw
 ```CPP
 String rssi = myNBiot.readRSSI();
 ```
+
+### [Server และ Protocol]
+- Server ให้บริการบน Google Cloud Platform.
+- Protocol แบบ UDP connection. (CoAP protocol กำลังพัฒนาอยู่ในขณะนี้)
+
+**รายละเอียดเพิ่มเติม**
+**website** : www.iottweet.com http://code.isaranu.com<br>
+**facebook** : https://www.facebook.com/IoTtweet<br>
+**facebook group** : https://www.facebook.com/groups/191156967967490<br>
+**LINE ID** : @codeisaranu
