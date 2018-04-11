@@ -15,6 +15,8 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 ### [วิธีใช้งานกับ Dashboard IoTtweet]
 
-- **สมัครใช้งาน IoTtweet** : เข้าไปที่ www.iottweet.com ทำการ Signup และ verify activate e-mail ให้เรียบร้อย. ไปที่ **My IoT garage** ทำการเพิ่ม device เพื่อรับ key ที่ใช้สำหรับใส่ลงใน code.
+- **สมัครใช้งาน IoTtweet** : เข้าไปที่ www.iottweet.com ทำการ Signup และ verify activate e-mail ให้เรียบร้อย. ไปที่ **"My IoT garage"** ทำการเพิ่ม device เพื่อรับ key ที่ใช้สำหรับใส่ลงใน code.
 
+- **ออกแบบ Dashboard** : ไปที่ **"Dashboard"**, และทำการ Edit layout. เพิ่ม Widget ต่างๆที่ต้องการ พร้อมทั้งตั้งค่า (setting) widget แต่ละ element ให้เรียบร้อย. เมื่อเสร็จเรียบร้อย ให้กด **"Save layout"**.
 
+- 
