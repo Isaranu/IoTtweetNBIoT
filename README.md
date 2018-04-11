@@ -25,3 +25,4 @@ Library สำหรับการส่งข้อมูลจากอุป
 **SendDHTsensor.ino** > ส่งค่าอุณหภูมิและความชื้นจากเซนเซอร์ DHT ไปที่ Dashboard ในช่องข้อมูล slot0, slot1 ตามลำดับ.<br>
 **SendDataToDashboard.ino** > Random ค่าส่งไปแสดงผลที่หน้า Dashboard ในช่องข้อมูล slot0 ถึง slot3 ตามลำดับ.<br>
 **SendRSSI** > ส่งค่าความเข้มสัญญาณ (Signal Strength - dbm) ไปแสดงผลที่ Dashboard.<br>
+> การเชื่อมต่อสัญญาณ NB-IoT ได้หรือไม่นั้น ขึ้นอยู่กับการเปิดสัญญาณในแต่ละพื้นที่.
