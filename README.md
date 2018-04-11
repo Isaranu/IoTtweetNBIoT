@@ -1,4 +1,4 @@
-![alt text](https://github.com/Isaranu/IoTtweetNBIoT/blob/master/Logo%20IoTtweetNBIoT.png "logo")
+![alt text](https://github.com/Isaranu/IoTtweetNBIoT/blob/master/logo.png "logo")
 # IoTtweetNBIoT
 Library สำหรับการส่งข้อมูลจากอุปกรณ์ NB-IoT ไปที่ **IoTtweet, Internet of Things platform** ที่ใช้งานง่ายที่สุดแล้วในตอนนี้ :)
 
