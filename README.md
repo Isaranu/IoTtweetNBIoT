@@ -1,5 +1,7 @@
 ![alt text](https://github.com/Isaranu/IoTtweetNBIoT/blob/master/logo.png "logo")
 # IoTtweetNBIoT
+![alt_text](https://img.shields.io/badge/bulid-passing-brightgreen.svg "bulidpassing")
+![alt_text](https://img.shields.io/badge/Compatible-ArduinoIDE-green.svg "bulidpassing")<br>
 Library สำหรับการส่งข้อมูลจากอุปกรณ์ NB-IoT ไปที่ **IoTtweet, Internet of Things platform** ที่ใช้งานง่ายที่สุดแล้วในตอนนี้ :)
 
 ### [รายละเอียดของ Library]
