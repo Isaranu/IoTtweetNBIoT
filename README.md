@@ -8,6 +8,8 @@ Library สำหรับการส่งข้อมูลจากอุป
 
 - อุปกรณ์ที่รองรับ และผ่านการทดสอบ **IoTtweetNBIoT** library นี้ผ่านการทดสอบด้วยอุปกรณ์ NB-IoT device.<br>
 **รุ่น Model** : DEVIO NB-SHIELD I. จากบริษัท AIS (Advanced Info Services plc.)<br>
+**รุ่น Model** : TRUE NB-IoT board. จากบริษัท TRUE Corp.<br>
+
 **ทำงานร่วมกับ** : Arduino UNO R3, Arduino MEGA 2560<br>
 กรณีต่อกับ Arduino UNO : สามารถใช้งานได้ทันที<br>
 กรณีต่อกับ Arduino MEGA 2560 : ให้ดึง jump สายดังนี้<br>
