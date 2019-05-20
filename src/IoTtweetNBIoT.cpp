@@ -14,11 +14,11 @@ String udpData = "HelloWorld";
 
 AIS_NB_BC95 AISnb;
 
-bool IoTtweetNBIoT:: init(){
+bool IoTtweetNBIoT::init(){
   AISnb.debug = false;  /* Terminated all debug print */
   Serial.begin(9600);
-  //Serial.println("--- NB-IoT device Initializing and network connecting..... ---");
 
+  Serial.println("Waiting Initialize...");
   AISnb.setupDevice(serverPort);
 
   String ip1 = AISnb.getDeviceIP();
@@ -28,7 +28,7 @@ bool IoTtweetNBIoT:: init(){
   return true;
 }
 
-String IoTtweetNBIoT:: sendDashboard(String userid, String key, float slot0, float slot1, float slot2, float slot3, String tw, String twpb){
+String IoTtweetNBIoT::sendDashboard(String userid, String key, float slot0, float slot1, float slot2, float slot3, String tw, String twpb){
 
   _userid = userid;
   _key = key;
@@ -70,6 +70,41 @@ String IoTtweetNBIoT:: sendDashboard(String userid, String key, float slot0, flo
   return "OK";
 }
 
+String IoTtweetNBIoT::readRSSI(){
+  signal chksignal_rssi = AISnb.getSignal();
+  _rssi = chksignal_rssi.rssi;
+  return _rssi;
+}
+
+String IoTtweetNBIoT::readCSQ(){
+  signal chksignal_csq = AISnb.getSignal();
+  _csq = chksignal_csq.csq;
+  return _csq;
+}
+
+String IoTtweetNBIoT::getVersion(){
+  return IoTtweetNBIoT_libVersion;
+}
+
+String IoTtweetNBIoT::pushLineNotify(String linetoken, String linemsg){
+
+  _linetoken = linetoken;
+  _linemsg = linemsg;
+
+  String _lnfPacket = "LNF";
+         _lnfPacket += ":";
+         _lnfPacket += _linetoken;
+         _lnfPacket += ":";
+         _lnfPacket += _linemsg;
+         _lnfPacket += ":";
+         _lnfPacket += "eol";
+
+  Serial.println("_lnfPacket = " + _lnfPacket);
+
+  UDPSend udpLineNoti = AISnb.sendUDPmsgStr(serverIP, serverPort, _lnfPacket);
+  return "Line Notify OK";
+}
+
 /*
 String IoTtweetNBIoT::receiveResponse(){
 
@@ -80,16 +115,3 @@ String IoTtweetNBIoT::receiveResponse(){
   return "received";
 }
 */
-
-String IoTtweetNBIoT:: readRSSI(){
-
-  signal chksignal = AISnb.getSignal();
-  _rssi = chksignal.rssi;
-
-  return _rssi;
-}
-
-String IoTtweetNBIoT:: getVersion()
-{
-  return IoTtweetNBIoT_libVersion;
-}
