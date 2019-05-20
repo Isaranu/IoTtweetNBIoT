@@ -19,6 +19,7 @@ public:
   String pushLineNotify(String linetoken, String linemsg);
   String getNetworkTime();
   String getRespFromServer();
+  String getControlbySwitch(String userid, String key, int swnum);
 
 private:
   String _packet, _rssi, _csq;
@@ -34,6 +35,7 @@ private:
   bool _conn;
   String _linetoken, _linemsg;
   String _ntp;
+  String _swnum;
 };
 
 #endif
