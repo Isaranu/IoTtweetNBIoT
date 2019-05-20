@@ -105,6 +105,41 @@ String IoTtweetNBIoT::pushLineNotify(String linetoken, String linemsg){
   return "Line Notify OK";
 }
 
+String IoTtweetNBIoT::getNetworkTime(){
+
+  String _ntpPacket = "NTP";
+  Serial.println("Request network time from server (+7GMT)");
+
+  UDPSend udpLineNoti = AISnb.sendUDPmsgStr(serverIP, serverPort, _ntpPacket);
+  _ntp = getRespFromServer();
+
+  return _ntp;
+}
+
+String IoTtweetNBIoT::getRespFromServer(){
+
+  String respStr = "";
+  unsigned long responseChkRetry = 50000;
+  int retCnt = 0;
+
+  while((respStr = "") && (retCnt < responseChkRetry)){
+    UDPReceive resp = AISnb.waitResponse();
+      if(resp.data != ""){
+        //Serial.println("resp.data = " + String(resp.data));
+        //Serial.println("retry cnt = " + String(retCnt));
+        respStr = AISnb.toString(resp.data);
+        return respStr;
+      }
+    retCnt++;
+  }
+
+  if(retCnt >= responseChkRetry){
+    Serial.println("Timeout at : " + String(retCnt));
+    return "Request timeout";
+  }
+
+}
+
 /*
 String IoTtweetNBIoT::receiveResponse(){
 
