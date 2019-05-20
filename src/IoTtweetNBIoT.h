@@ -14,13 +14,12 @@ public:
   String sendDashboard(String userid, String key, float slot0, float slot1, float slot2, float slot3, String tw, String twpb);
   String receiveResponse();
   String readRSSI();
+  String readCSQ();
   String getVersion();
-
-  //String ReadDigitalSwitch(const char *userid, const char *key, uint8_t sw);
-  //float ReadAnalogSlider(const char *userid, const char *key, uint8_t slider);
+  String pushLineNotify(String linetoken, String linemsg);
 
 private:
-  String _packet, _rssi;
+  String _packet, _rssi, _csq;
   String _userid, _key;
   String _tw, _twpb;
   float _slot0, _slot1, _slot2, _slot3;
@@ -31,6 +30,7 @@ private:
   String _allcontrol;
   uint8_t _sw, _slider;
   bool _conn;
+  String _linetoken, _linemsg;
 };
 
 #endif
