@@ -17,6 +17,8 @@ public:
   String readCSQ();
   String getVersion();
   String pushLineNotify(String linetoken, String linemsg);
+  String getNetworkTime();
+  String getRespFromServer();
 
 private:
   String _packet, _rssi, _csq;
@@ -31,6 +33,7 @@ private:
   uint8_t _sw, _slider;
   bool _conn;
   String _linetoken, _linemsg;
+  String _ntp;
 };
 
 #endif
