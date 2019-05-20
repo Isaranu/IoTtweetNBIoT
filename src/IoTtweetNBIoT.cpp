@@ -4,7 +4,7 @@
 /* IoTtweet configuration parameter */
 #define IoTtweetNBIoT_HOST "35.185.177.33"    // - New Cloud IoTtweet server
 #define IoTtweetNBIoT_PORT "5683"             // - Default udp port
-#define IoTtweetNBIoT_libVersion "v1.0"
+#define IoTtweetNBIoT_libVersion "v1.7"
 
 /* AIS_NB_BC95 library parameter */
 String apnName = "devkit.nb";
@@ -138,6 +138,25 @@ String IoTtweetNBIoT::getRespFromServer(){
     return "Request timeout";
   }
 
+}
+
+String IoTtweetNBIoT::getControlbySwitch(String userid, String key, int swnum){
+
+  _userid = userid;
+  _key = key;
+  _swnum = String(swnum);
+
+  String _getswctl = "SWC";
+         _getswctl += ":";
+         _getswctl += _userid;
+         _getswctl += ":";
+         _getswctl += _key;
+         _getswctl += ":";
+         _getswctl += _swnum;
+
+  UDPSend udpGetcontrol = AISnb.sendUDPmsgStr(serverIP, serverPort, _getswctl);
+  String _ctlstatus = getRespFromServer();
+  return _ctlstatus;
 }
 
 /*
