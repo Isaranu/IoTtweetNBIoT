@@ -20,6 +20,7 @@ public:
   String getNetworkTime();
   String getRespFromServer();
   String getControlbySwitch(String userid, String key, int swnum);
+  String getUDPip();
 
 private:
   String _packet, _rssi, _csq;
@@ -36,6 +37,7 @@ private:
   String _linetoken, _linemsg;
   String _ntp;
   String _swnum;
+  String _udpip;
 };
 
 #endif
