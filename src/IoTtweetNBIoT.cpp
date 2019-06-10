@@ -15,7 +15,7 @@ String udpData = "HelloWorld";
 AIS_NB_BC95 AISnb;
 
 bool IoTtweetNBIoT::init(){
-  AISnb.debug = false;  /* Terminated all debug print */
+  AISnb.debug = true;
   Serial.begin(9600);
 
   Serial.println("Waiting Initialize...");
