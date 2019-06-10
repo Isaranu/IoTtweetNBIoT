@@ -4,7 +4,7 @@
 /* IoTtweet configuration parameter */
 #define IoTtweetNBIoT_HOST "35.185.177.33"    // - New Cloud IoTtweet server
 #define IoTtweetNBIoT_PORT "5683"             // - Default udp port
-#define IoTtweetNBIoT_libVersion "v2.2"
+#define IoTtweetNBIoT_libVersion "v2.3"
 
 /* AIS_NB_BC95 library parameter */
 String apnName = "devkit.nb";
